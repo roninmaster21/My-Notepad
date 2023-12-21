@@ -68,7 +68,7 @@ def copy_command():
 
 window = tk.Tk()
 window.title(programName)
-window.resizable(width=False, height=False)
+#window.resizable(width=False, height=False)
 
 menubar = tk.Menu(window)
 window.config(menu=menubar)
@@ -80,6 +80,6 @@ menubar.add_command(label="Save As",command=saveas_command)
 menubar.add_command(label="Copy Text",command=copy_command)
 
 textArea = tk.Text(font=("Courier", 12))
-textArea.pack()
+textArea.pack(expand=True,fill="both")
 
 window.mainloop()
